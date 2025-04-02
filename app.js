@@ -12,6 +12,6 @@ app.use((req, res, next) => {
 })
 
 //Routes
-app.use('/', postRouter)
+app.use('/posts', postRouter)
 
 module.exports = app
