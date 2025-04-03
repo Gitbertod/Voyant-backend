@@ -13,5 +13,6 @@ app.use((req, res, next) => {
 
 //Routes
 app.use('/posts', postRouter)
+app.use('/users',userRouter)
 
 module.exports = app
