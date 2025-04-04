@@ -16,7 +16,7 @@ const userSchema = new mongoose.Schema({
         require: [true, "User must have a email"],
         unique: true,
     },
-    address: {
+    location: {
         city:{
             type: String,
             required: [true, "Address must have a city"]
@@ -25,7 +25,8 @@ const userSchema = new mongoose.Schema({
             type: String,
             required: [true, "Address must have a country"]
         },
-    }, phone: {
+    }, 
+    phone: {
         type: String,
         require: [true, "User must have a phone"]
     },

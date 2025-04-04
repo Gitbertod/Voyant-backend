@@ -1,6 +1,7 @@
 const express = require('express');
 const morgan = require('morgan');
 const postRouter = require('./routes/postsRouter')
+const userRouter = require('./routes/userRouter')
 const app = express();
 
 app.use(morgan('dev'));

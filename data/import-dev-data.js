@@ -1,6 +1,7 @@
 const dotenv = require('dotenv');
 const mongoose = require('mongoose');
 const Post = require('../models/postModel')
+const User = require('../models/userModel')
 
 dotenv.config({ path: './config.env' });
 
@@ -21,11 +22,11 @@ mongoose.connect(DB, {
 const importData = async () => {
     try {
         // Consumir la API
-        const response = await fetch('https://jsonplaceholder.typicode.com/posts')
+        const response = await fetch('https://randomuser.me/api/?results=10')
         const data = await response.json();
 
         //Guardo los datos en MongoDB
-        await Post.create(data)
+        await User.create(data.results)
 
         console.log('Data successfully loaded!');
         process.exit();
